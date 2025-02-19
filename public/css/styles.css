@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  
+  .search-filters {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .search-filters input,
+  .search-filters select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .auth-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    margin-left: 0.5rem;
+  }
+  
+  .mla-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .mla-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .mla-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .mla-info {
+    padding: 1rem;
+  }
+  
+  .mla-info h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .rating {
+    color: #ffd700;
+    margin: 0.5rem 0;
+  }
+  
+  .review-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .review-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .btn-review {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn-view {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .reviews-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+  
+  .review-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+  }
+  
+  .review-item:last-child {
+    border-bottom: none;
+  }
+
+  /* login form */
+
+  #loginForm>input{
+    padding: 0.4rem 1rem;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-color: #363535;
+    text-decoration: none;
+  
+  }
+  #loginForm>input+input{
+    padding: 0.4rem 1rem;
+    width: 100%;
+    border-color: #363535;
+  }
+
+#loginForm>input+input+button{
+  background-color: #007bff;
+  color: #fefefe;
+   border: none;
+   font-size: 18px;
+   font-family: sans-serif;
+   font-weight: 400;
+   padding: 0.4rem 1rem;
+   border-radius: 8px;
+   margin-top: 5px;
+   width: 100%;
+   
+}
+
+#registerForm>input{
+  padding: 0.4rem 1rem;
+  border-color: #363535;
+  width: 100%;
+ margin-bottom: 10px;
+ border-radius: 8px;
+}
+#registerForm>input+input{
+  padding: 0.4rem 1rem;
+  width: 100%;
+  border-color: #363535;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+#registerForm>input+input+input{
+  padding: 0.4rem 1rem;
+  width: 100%;
+  border-color: #363535;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+#registerForm>input+input+input+button{
+  background-color: #007bff;
+  color: #fffefe;
+   border: none;
+   font-size: 18px;
+   font-family: sans-serif;
+   font-weight: 400;
+   padding: 0.4rem 1rem;
+   border-radius: 8px;
+   margin-top: 5px;
+   width: 100%;
+   
+}
+@media (max-width: 768px) {
+  #registerModal{
+    width: 80%;
+  }
+  #loginModal{
+    width: 80%;
+  }
+}
+
+
+
+  
+  @media (max-width: 768px) {
+    .search-filters {
+      flex-direction: column;
+    }
+  
+    .mla-grid {
+      grid-template-columns: 1fr;
+    }
+  }
